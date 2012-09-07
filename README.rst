@@ -5,7 +5,7 @@ Yet another email login for django
 Distict features:
 
 * It actually fixes two problems with logging users by email, that is: email field is not unique
- and unindexed.
+       and unindexed.
 * Doesnt create new tables in the database.
 
 
@@ -17,7 +17,7 @@ This app is dead simple:
 What it doesn't support:
 
 * I didn't patch user creation process, in for which I developed it users will be created
- by admin.
+     by admin.
 
 When not to use it
 ------------------
