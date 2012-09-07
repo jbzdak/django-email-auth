@@ -19,11 +19,18 @@ What it doesn't support:
 * I didn't patch user creation process, in for which I developed it users will be created
  by admin.
 
+When not to use it
+------------------
+
+When you are not using south.
+
 Usage
 -----
 
-1. Add `email_login` to APPLICATIONS setting.
-2. Add `'email_login.backend.EmailAuthBackend'` to `AUTHENTICATION_BACKENDS` setting, so it
+1. Install `south`
+2. Add `email_login` to APPLICATIONS setting.
+3. Sync db and then migrate `email_login`
+3. Add `'email_login.backend.EmailAuthBackend'` to `AUTHENTICATION_BACKENDS` setting, so it
    looks like that::
 
     AUTHENTICATION_BACKENDS = (
