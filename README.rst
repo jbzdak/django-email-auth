@@ -30,8 +30,7 @@ Usage
 1. Install `south`
 2. Add `email_login` to APPLICATIONS setting.
 3. Sync db and then migrate `email_login`
-3. Add `'email_login.backend.EmailAuthBackend'` to `AUTHENTICATION_BACKENDS` setting, so it
-   looks like that::
+4. Add `'email_login.backend.EmailAuthBackend'` to `AUTHENTICATION_BACKENDS` setting, so it looks like that::
 
     AUTHENTICATION_BACKENDS = (
         'django.contrib.auth.backends.ModelBackend',
