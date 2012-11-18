@@ -16,7 +16,7 @@ class Migration(DataMigration):
         USER_TABLE = orm['auth.user']._meta.db_table
         db.create_unique(USER_TABLE, ['email'])
 
-        db.alter_column(USER_TABLE, 'username', models.CharField(_('username'), max_length=100, unique=True,
+        db.alter_column(USER_TABLE, 'username', models.CharField(_('username'), max_length=100, unique=True, null=False,
                 help_text=_('Required. 30 characters or fewer. Letters, numbers and '
                             '@/./+/-/_ characters')))
         db.commit_transaction()
